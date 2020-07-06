@@ -1,0 +1,8 @@
+sample:
+  name: SPI Driver Sample
+tests:
+  sample.drivers.spi.testing:
+    tags: drivers spi
+    harness: spi
+    depends_on: gpio spi
+    filter: dt_alias_exists("spi-1")
