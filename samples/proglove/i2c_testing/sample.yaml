@@ -1,0 +1,7 @@
+sample:
+  name: Demo for (I2C) using Tiny RTC (DS1307)
+tests:
+  sample.drivers.i2c.testing:
+    tags: drivers
+    depends_on: i2c
+    filter: dt_alias_exists("i2c-1")
