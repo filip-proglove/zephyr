@@ -174,7 +174,7 @@ static inline nrf_qspi_frequency_t get_nrf_qspi_prescaler(u32_t frequency)
 	if (frequency < 2000000UL) {
 		ret = -EINVAL;
 	} else if (frequency >= 32000000UL) {
-		ret = NRF_QSPI_FREQ_32MDIV1;
+		ret = NRF_QSPI_FREQ_DIV1; //NRF_QSPI_FREQ_32MDIV1
 	} else {
 		ret = (nrf_qspi_frequency_t)((32000000UL / frequency) - 1);
 	}

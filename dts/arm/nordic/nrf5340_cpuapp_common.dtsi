@@ -289,6 +289,16 @@ spi4: spi@a000 {
 	label = "SPI_4";
 };
 
+qspi: qspi@2B000 {
+	compatible = "nordic,nrf-qspi";
+	#address-cells = <1>;
+	#size-cells = <0>;
+	reg = <0x2B000 0x1000>;
+	interrupts = <43 1>;
+	status = "disabled";
+	label = "QSPI";
+};
+
 pwm0: pwm@21000 {
 	compatible = "nordic,nrf-pwm";
 	reg = <0x21000 0x1000>;
