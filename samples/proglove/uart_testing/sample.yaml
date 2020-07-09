@@ -1,0 +1,8 @@
+sample:
+  name: Uart Testing Sample
+tests:
+  sample.drivers.uart.testing:
+    tags: drivers serial
+    harness: serial
+    depends_on: gpio uart
+    filter: dt_alias_exists("uart-1")
